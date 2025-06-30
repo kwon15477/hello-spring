@@ -1,5 +1,6 @@
 package hello.hello_spring.service;
 
+import hello.hello_spring.aop.Logging;
 import hello.hello_spring.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,6 +10,7 @@ import java.util.Optional;
 
 @Transactional
 //@Service
+
 public class MemberService {
 
 
@@ -20,6 +22,7 @@ public class MemberService {
     }
 
     //회원 가입
+    @Logging
     public Long join(Member member) {
 
         //같은 이름 중복 회원x
@@ -37,6 +40,7 @@ public class MemberService {
     }
 
     //전체 회원 조회
+    @Logging
     public List<Member> findMembers() {
 
         return memberRepository.findAll();

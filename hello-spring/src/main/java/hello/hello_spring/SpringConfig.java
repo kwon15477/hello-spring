@@ -1,5 +1,6 @@
 package hello.hello_spring;
 
+import hello.hello_spring.aop.LoggingAspect;
 import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.service.MemberService;
 import org.springframework.context.annotation.Bean;
@@ -36,7 +37,11 @@ public class SpringConfig {
 
     }
 
-
+    @Bean
+    public LoggingAspect loggingAspect() {
+        return new LoggingAspect();
+    }
+}
 //    @Bean
 //    public TimeTraceAop timeTraceAop() {
 //        return new TimeTraceAop();
@@ -52,4 +57,4 @@ public class SpringConfig {
 //    }
 
 
-}
+
