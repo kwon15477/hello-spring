@@ -8,6 +8,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.LOCAL_VARIABLE, ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Logging {
-
-
+    
 }
