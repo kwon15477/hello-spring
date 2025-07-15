@@ -17,5 +17,6 @@ public class LoggingAspect {
         Object result = joinPoint.proceed();
         log.info("함수 호출 후: {}", methodName);
         return result;
+
     }
 }
